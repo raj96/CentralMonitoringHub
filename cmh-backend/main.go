@@ -12,8 +12,8 @@ func main() {
 	// gin.SetMode(gin.ReleaseMode)
 	// gin.DisableConsoleColor()
 
-	// model.ConnectToDB("mongodb://cmh:cmh@65.0.96.94:27017/admin?retryWrites=true&w=majority")
-	// datastream.ConnectToMqttBroker("test.mosquitto.org", 1883)
+	model.ConnectToDB("mongodb://cmh:cmh@65.0.96.94:27017/admin?retryWrites=true&w=majority")
+	datastream.ConnectToMqttBroker("test.mosquitto.org", 1883)
 
 	router := gin.New()
 	router.Use(middlewares.DisableCors)
